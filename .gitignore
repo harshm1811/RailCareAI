@@ -1,0 +1,11 @@
+# Python environments
+venv/
+__pycache__/
+
+# API Keys and Secrets
+.env
+
+# Test Images
+*.jpg
+*.png
+*.jpeg
