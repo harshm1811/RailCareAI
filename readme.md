@@ -53,6 +53,8 @@ python app.py
 
 ```
 
+Once you save the file with all 5 steps included, run those three `git` commands (`add`, `commit`, `push`) to send it up to GitHub. 
+
 ## 🗄️ Database
 
 The application uses PostgreSQL through Supabase.
