@@ -53,12 +53,34 @@ python app.py
 
 ```
 
+## 🗄️ Database
 
+The application uses PostgreSQL through Supabase.
 
-```
+### Core Tables
 
-Once you save the file with all 5 steps included, run those three `git` commands (`add`, `commit`, `push`) to send it up to GitHub. 
+- `users` — Passenger, admin, and officer accounts
+- `departments` — Complaint handling departments
+- `complaints` — Main passenger complaint records
+- `ai_analysis` — AI classification and extracted complaint information
+- `incidents` — Incident tracking
+- `officers` — Officer information and assignments
+- `media` — Complaint image, audio, and video references
+- `status_history` — Tracks complaint status changes
 
-<FollowUp label="What's next for the AI engine?" query="Once the README is up, do you want to wrap the AI in a FastAPI endpoint for your backend teammate, or start building the audio processing module?"/>
+### Database Design
 
-```
+The database uses PostgreSQL enums for controlled values including:
+
+- `user_role`
+- `complaint_category`
+- `complaint_priority`
+- `complaint_status`
+- `incident_severity`
+- `incident_status`
+- `media_type`
+
+The complete database schema is available in:
+
+```text
+schema.sql
