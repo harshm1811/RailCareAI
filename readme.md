@@ -1,26 +1,26 @@
 
 
+
+## RailCare AI - Intelligent Complaint Triage
 ```markdown
-# RailCare AI - Intelligent Complaint Triage
-
 An AI-powered multimodal inspection and routing engine for Indian Railways passenger complaints.
-
+```
 ## 👥 Core Team
-* Harsh Mishra
-* Harsha Soans
-* Soham Shingade
-* Gaurang Gohil
-* Mrunmayee Joshi
-* Harsh Sawant
-
+```
+1. Harsh Mishra
+2. Harsha Soans
+3. Soham Shingade
+4. Gaurang Gohil
+5. Mrunmayee Joshi
+6. Harsh Sawant
+```
 
 ## 🚀 Quick Setup Guide
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/harshm1811/RailCareAI.git](https://github.com/harshm1811/RailCareAI.git)
-   cd RailCareAI
-
+```bash
+git clone [https://github.com/harshm1811/RailCareAI.git](https://github.com/harshm1811/RailCareAI.git)
+cd RailCareAI
 ```
 
 2. **Create and activate the virtual environment:**
