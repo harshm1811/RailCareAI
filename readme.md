@@ -1,26 +1,26 @@
 
 
+
+## RailCare AI - Intelligent Complaint Triage
 ```markdown
-# RailCare AI - Intelligent Complaint Triage
-
 An AI-powered multimodal inspection and routing engine for Indian Railways passenger complaints.
-
+```
 ## 👥 Core Team
-* Harsh Mishra
-* Harsha Soans
-* Soham Shingade
-* Gaurang Gohil
-* Mrunmayee Joshi
-* Harsh Sawant
-
+```
+1. Harsh Mishra
+2. Harsha Soans
+3. Soham Shingade
+4. Gaurang Gohil
+5. Mrunmayee Joshi
+6. Harsh Sawant
+```
 
 ## 🚀 Quick Setup Guide
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/harshm1811/RailCareAI.git](https://github.com/harshm1811/RailCareAI.git)
-   cd RailCareAI
-
+```bash
+git clone [https://github.com/harshm1811/RailCareAI.git](https://github.com/harshm1811/RailCareAI.git)
+cd RailCareAI
 ```
 
 2. **Create and activate the virtual environment:**
@@ -53,12 +53,54 @@ python app.py
 
 ```
 
-
-
-```
-
 Once you save the file with all 5 steps included, run those three `git` commands (`add`, `commit`, `push`) to send it up to GitHub. 
 
-<FollowUp label="What's next for the AI engine?" query="Once the README is up, do you want to wrap the AI in a FastAPI endpoint for your backend teammate, or start building the audio processing module?"/>
+## 🗄️ Database
 
-```
+The application uses PostgreSQL through Supabase.
+
+### Core Tables
+
+- `users` — Passenger, admin, and officer accounts
+- `departments` — Complaint handling departments
+- `complaints` — Main passenger complaint records
+- `ai_analysis` — AI classification and extracted complaint information
+- `incidents` — Incident tracking
+- `officers` — Officer information and assignments
+- `media` — Complaint image, audio, and video references
+- `status_history` — Tracks complaint status changes
+
+### Database Design
+
+The database uses PostgreSQL enums for controlled values including:
+
+- `user_role`
+- `complaint_category`
+- `complaint_priority`
+- `complaint_status`
+- `incident_severity`
+- `incident_status`
+- `media_type`
+
+### Database Files
+
+**`schema.sql`**
+
+Contains the database structure, including:
+
+- Table definitions
+- PostgreSQL enums
+- Primary and unique constraints
+- Foreign-key relationships
+- Database indexes
+
+**`seed.sql`**
+
+Contains sanitized development/demo data for:
+
+- Departments
+- User roles and sample users
+
+UUIDs and timestamps are generated automatically by the database.
+
+> The SQL files are intended for database documentation, development, and reproducibility. They do not modify the existing Supabase database unless explicitly executed.
