@@ -82,7 +82,25 @@ The database uses PostgreSQL enums for controlled values including:
 - `incident_status`
 - `media_type`
 
-The complete database schema is available in:
+### Database Files
 
-```text
-schema.sql
+**`schema.sql`**
+
+Contains the database structure, including:
+
+- Table definitions
+- PostgreSQL enums
+- Primary and unique constraints
+- Foreign-key relationships
+- Database indexes
+
+**`seed.sql`**
+
+Contains sanitized development/demo data for:
+
+- Departments
+- User roles and sample users
+
+UUIDs and timestamps are generated automatically by the database.
+
+> The SQL files are intended for database documentation, development, and reproducibility. They do not modify the existing Supabase database unless explicitly executed.
