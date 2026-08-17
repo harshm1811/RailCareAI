@@ -1,7 +1,8 @@
 import uuid
 from datetime import datetime, timedelta, timezone
 from typing import Optional
-
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -26,7 +27,11 @@ from sqlalchemy.orm import declarative_base, sessionmaker, Session
 # DATABASE CONNECTION
 # ============================================================
 
-DATABASE_URL = "postgresql://postgres.nbfehwyhpsjbmrdfoesc:cmTXAcMGc3lIQHm3@aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres"
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL is not set in the environment")
 
 engine = create_engine(
     DATABASE_URL,
